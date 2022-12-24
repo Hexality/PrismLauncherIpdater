@@ -9,8 +9,9 @@ In case you want to use the updater, just the the updater (exe) by clicking [her
 - > it's recommended for you to create a shortcut linking directly to the updater, this way whenever the launcher receives a update, it will show you a window telling you to update.
 
 
-In case you want to (re)install the launcher, just put the updater inside a empty folder and run it, it will automatically set the folder as your launcher folder and create shortcuts to the updater on your desktop/start menu.
+In case you want to (re)install the launcher, just put the updater inside a empty folder and run it, it will automatically set the folder as your launcher folder and `create shortcuts to the updater on your desktop/start menu`*.
 - > There's no way to disable the shortcut creation due to the way I designed the launcher, unless you remove the creation command yourself.
+  - > *Only works with the exe version.
 
 <h2 align="center">Windows may give you false-positives on the exe version due to the fact that its not signed, just ignore those.</h2>
 <p>If you're not that confident with the exe version, just use the ps1 version available <a href="https://github.com/Hexality/PrismLauncherUpdater/releases/latest/download/Updater.ps1">[here]</a>.</p>
