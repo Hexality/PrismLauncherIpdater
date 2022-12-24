@@ -21,6 +21,7 @@ function MakeShortcut {
     $WshShell = New-Object -comObject WScript.Shell
     $Shortcut = $WshShell.CreateShortcut($Destination)
     $Shortcut.TargetPath = $Source
+    $Shortcut.WorkingDirectory = "$((Get-Location).Path)"
     $Shortcut.Save()
 }
 function GetAccent {
@@ -111,8 +112,8 @@ function UnpackFile {
     $o.Dispose()
     Remove-Item $env:TEMP\pack.zip
     if($installer) {
-        MakeShortcut (Join-Path ((Get-Location).Path) Updater.exe) (Join-Path (Join-Path $env:USERPROFILE Desktop) 'Prism Launcher.lnk')
-        MakeShortcut (Join-Path ((Get-Location).Path) Updater.exe) (Join-Path (Join-Path (Join-Path (Join-Path (Join-Path $env:APPDATA Microsoft) Windows) 'Start Menu') Programs) 'Prism Launcher.lnk')
+        MakeShortcut 'powershell -executionpolicy bypass -c ".(Join-Path ((Get-Location).Path) Updater.ps1)"' (Join-Path (Join-Path $env:USERPROFILE Desktop) 'Prism Launcher.lnk')
+        MakeShortcut 'powershell -executionpolicy bypass -c ".(Join-Path ((Get-Location).Path) Updater.ps1)"' (Join-Path (Join-Path (Join-Path (Join-Path (Join-Path $env:APPDATA Microsoft) Windows) 'Start Menu') Programs) 'Prism Launcher.lnk')
     }
     Launch
 }
