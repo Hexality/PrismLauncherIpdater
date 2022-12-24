@@ -1,5 +1,7 @@
 # This is a Windows-only updater for PrismLauncher entirely made using Powershell Winforms.
 
+![image](https://user-images.githubusercontent.com/17398632/209416690-9f2ec2d0-e894-46ef-b987-4849e186cde0.png)
+
 In case you want to use the updater, just the the updater (exe) by clicking [here](https://github.com/Hexality/PrismLauncherUpdater/releases/latest/download/Updater.exe) and put it inside your launcher folder.
 > If you installed the launcher using the installer, the folder can be found at `%localappdata%/PrismLauncher`
 > If you use it portably, just put the updater in the folder and run it.
