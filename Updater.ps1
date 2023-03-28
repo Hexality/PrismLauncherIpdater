@@ -180,8 +180,8 @@ function InstallMenu {
     $logo = [System.Drawing.Image]::FromStream($ms, $true)
 
     $o = [Form]@{
-        MinimumSize = [Point]::new(300,420)
-        MaximumSize = [Point]::new(300,420)
+        MinimumSize = [Size]::new(300,420)
+        MaximumSize = [Size]::new(300,420)
         BackColor = $t.bg
         ForeColor = $t.fg
         Icon = [System.Drawing.Icon]::FromHandle((new-object System.Drawing.Bitmap -argument $ims).GetHIcon())
@@ -193,7 +193,7 @@ function InstallMenu {
 
     $p = [Button]@{
         Text = "Install"
-        Size = [Point]::new(130,32)
+        Size = [Size]::new(130,32)
         Location = [Point]::new(($o.ClientSize.Width/2)-(130/2),($o.ClientSize.Height-158))
         Anchor = 'Bottom'
         FlatStyle = 'Flat'
@@ -205,7 +205,7 @@ function InstallMenu {
 
     $q = [Button]@{
         Text = "Cancel"
-        Size = [Point]::new(130,32)
+        Size = [Size]::new(130,32)
         Location = [Point]::new(($o.ClientSize.Width/2)-(130/2),($o.ClientSize.Height-122))
         Anchor = 'Bottom'
         FlatStyle = 'Flat'
@@ -217,7 +217,7 @@ function InstallMenu {
 
     $s = [Button]@{
         BackColor = $t.bg
-        Size = [Point]::new(($o.ClientSize.Width-96),8)
+        Size = [Size]::new(($o.ClientSize.Width-96),8)
         FlatStyle = 'Flat'
         Visible = $False
     }
@@ -258,7 +258,7 @@ function InstallMenu {
         FlatStyle = 'Flat'
         BackColor = $t.ba
         Font = [Font]::new('Lato', 4)
-        Size = [Point]::new(18,16)
+        Size = [Size]::new(18,16)
         AutoSize = $true
         Appearance = 'Button'
     }
@@ -343,8 +343,8 @@ function UpdateMenu {
     $logo = [System.Drawing.Image]::FromStream($ms, $true)
 
     $o = [Form]@{
-        MinimumSize = [Point]::new(300,420)
-        MaximumSize = [Point]::new(300,420)
+        MinimumSize = [Size]::new(300,420)
+        MaximumSize = [Size]::new(300,420)
         BackColor = $t.bg
         ForeColor = $t.fg
         Icon = [System.Drawing.Icon]::FromHandle((new-object System.Drawing.Bitmap -argument $ims).GetHIcon())
@@ -356,7 +356,7 @@ function UpdateMenu {
 
     $p = [Button]@{
         Text = "Update"
-        Size = [Point]::new(130,32)
+        Size = [Size]::new(130,32)
         Location = [Point]::new(($o.ClientSize.Width/2)-(130/2),($o.ClientSize.Height-128))
         Anchor = 'Bottom'
         FlatStyle = 'Flat'
@@ -368,7 +368,7 @@ function UpdateMenu {
 
     $q = [Button]@{
         Text = "Remind me later"
-        Size = [Point]::new(130,32)
+        Size = [Size]::new(130,32)
         Location = [Point]::new(($o.ClientSize.Width/2)-(130/2),($o.ClientSize.Height-92))
         Anchor = 'Bottom'
         FlatStyle = 'Flat'
@@ -388,7 +388,7 @@ function UpdateMenu {
 
     $s = [Button]@{
         BackColor = $t.bg
-        Size = [Point]::new(($o.ClientSize.Width-96),8)
+        Size = [Size]::new(($o.ClientSize.Width-96),8)
         FlatStyle = 'Flat'
         Visible = $False
     }
